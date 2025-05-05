@@ -1,8 +1,12 @@
 # Use official Elixir image
-FROM elixir:1.14-alpine
-RUN apk add --no-cache git build-base
+FROM elixir:1.16.1
+RUN apt-get update && apt-get install -y git
+
+
 # Set the working directory
 WORKDIR /app
+
+ENV MIX_ENV=prod
 
 # Install dependencies
 RUN mix local.hex --force && \
@@ -19,7 +23,6 @@ COPY . .
 RUN mix compile
 
 # Set the environment variables for production
-ENV MIX_ENV=prod
 ENV PORT=4000
 
 # Expose the port the app will run on
