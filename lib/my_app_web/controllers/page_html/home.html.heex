@@ -1,0 +1,56 @@
+<.flash_group flash={@flash} />
+
+<!-- Vibrant Background Art -->
+<div class="fixed inset-y-0 right-0 z-0 hidden lg:block xl:left-[50rem]">
+  <svg
+    viewBox="0 0 1480 957"
+    fill="none"
+    aria-hidden="true"
+    class="absolute inset-0 h-full w-full"
+    preserveAspectRatio="xMinYMid slice"
+  >
+    <path fill="#EE7868" d="M0 0h1480v957H0z" />
+    <path d="M..." fill="#FF9F92" />
+    <!-- You can reuse the original SVG paths or shorten for simplicity -->
+  </svg>
+</div>
+
+<!-- Welcome Message Section -->
+<div class="px-6 py-20 sm:py-28 lg:px-12 xl:px-24 xl:py-32 relative z-10">
+  <div class="max-w-xl mx-auto lg:mx-0">
+    <h1 class="text-sm font-semibold text-brand flex items-center">
+      Welcome to Your Phoenix App
+      <span class="ml-3 rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium">
+        v{Application.spec(:phoenix, :vsn)}
+      </span>
+    </h1>
+    <h2 class="mt-6 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+      Let’s build something amazing.
+    </h2>
+    <p class="mt-4 text-lg leading-7 text-zinc-600">
+      First Sample Elixir Project in Cosmofoil. You've successfully started your Phoenix project. Explore documentation, connect with the community, or dive into the source code.
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <a
+        href="https://hexdocs.pm/phoenix/overview.html"
+        class="group relative rounded-2xl px-6 py-4 bg-zinc-50 hover:bg-zinc-100 transition text-sm font-semibold text-zinc-900"
+      >
+        📘 Docs
+      </a>
+      <a
+        href="https://github.com/phoenixframework/phoenix"
+        class="group relative rounded-2xl px-6 py-4 bg-zinc-50 hover:bg-zinc-100 transition text-sm font-semibold text-zinc-900"
+      >
+        🧠 GitHub
+      </a>
+      <a
+        href={"https://github.com/phoenixframework/phoenix/blob/v#{Application.spec(:phoenix, :vsn)}/CHANGELOG.md"}
+        class="group relative rounded-2xl px-6 py-4 bg-zinc-50 hover:bg-zinc-100 transition text-sm font-semibold text-zinc-900"
+      >
+        📄 Changelog
+      </a>
+    </div>
+  </div>
+</div>
