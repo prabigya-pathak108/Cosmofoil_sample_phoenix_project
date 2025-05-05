@@ -1,6 +1,6 @@
 # Use official Elixir image
 FROM elixir:1.14-alpine
-
+RUN apk add --no-cache git build-base
 # Set the working directory
 WORKDIR /app
 
